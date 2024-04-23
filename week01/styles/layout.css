@@ -5,6 +5,7 @@ body {
 }
 
 header {
+    display: block;
     margin: 0;
     padding: 0;
 }
@@ -57,25 +58,30 @@ nav a {
     color: white;
 }
 
+main {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    min-height: 35em;
+}
+
 article {
+    grid-column: 1/4;
     background-color: #cccccc;
     float: left;
-    width: 68%;
-    height: 35em;
     padding: 1%;
 }
 
 .sidebar {
     float: left;
     background-color: white;
-    width: 28%;
     padding: 1%;
-    height: 35em;
     color: #4e4e4e;
 }
 
 footer {
-    display: block;
+    display: grid;
+    grid-template-columns: auto;
+    float: left;
     width: 98%;
     float: left;
     padding: 1%;
