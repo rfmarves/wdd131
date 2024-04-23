@@ -5,10 +5,16 @@ body {
 }
 
 header {
+    margin: 0;
+    padding: 0;
+}
+
+header p {
     color: white;
     background-color: #333333;
     padding: 15pt;
     height: 4em;
+    margin: 0;
 }
 
 nav {
