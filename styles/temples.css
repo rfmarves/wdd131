@@ -1,0 +1,69 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+body {
+    font-family: Montserrat, sans;
+}
+
+header {
+    color: #ffffff;
+    background-color: #072e81;
+}
+
+.header {
+    display: flex;
+}
+
+header h1 {
+    padding: 1rem;
+    flex: 1 1 100%;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    content: "a";
+    color: white;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+#menu.show::before {
+    content: "×";
+}
+
+nav {
+    display: none;
+}
+
+nav.show {
+    display: block;
+    align-items: right;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: right;
+}
+
+nav a:hover {
+    background-color: #124ecf;
+}
+
+
+
