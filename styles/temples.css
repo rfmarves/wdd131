@@ -1,4 +1,6 @@
- * {
+/* general elements */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,9 +10,19 @@ body {
     font-family: Montserrat, sans;
 }
 
-header {
+/* Header, footer and navigation */
+header, footer {
     color: #ffffff;
     background-color: #072e81;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.lastMod {
+    font-size: smaller;
 }
 
 .header {
@@ -65,5 +77,28 @@ nav a:hover {
     background-color: #124ecf;
 }
 
+/* Main section */
+main {
+    margin: 1rem auto;
+    max-width: 960px;
+}
 
+article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 25px;
+    column-gap: 25px;
+}
 
+main h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+main figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 200px;
+}
