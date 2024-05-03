@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
- 
+}
+
 body {
     font-family: Montserrat, sans;
 }
 
 /* Header, footer and navigation */
-header, footer {
+header,
+footer {
     color: #ffffff;
     background-color: #072e81;
 }
@@ -43,7 +44,7 @@ header h1 {
 }
 
 #menu::before {
-	content: "≡";
+    content: "≡";
 }
 
 #menu.show::before {

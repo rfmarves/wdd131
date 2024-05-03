@@ -2,10 +2,11 @@
     nav {
         display: block;
     }
-    
+
     nav ul {
-        display: flex; 
+        display: flex;
     }
+
     nav ul li {
         flex: 1 1 100%;
     }
