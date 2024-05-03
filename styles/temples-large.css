@@ -1,6 +1,4 @@
 @media (min-width: 640px) {
-
-/* Header and navigation */
     nav {
         display: block;
     }
@@ -19,7 +17,5 @@
     #menu {
         display: none;
     }
-
-/* Main section */
 
 }
