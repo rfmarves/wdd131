@@ -27,13 +27,17 @@ header > h1 {
     padding: .75em;
 }
 
-.accent_bar {
+header::after {
+    content: "";
+    display: block;
     background-color: var(--secondary-color);
     width: 100%;
     height: 3vh;
 }
 
-.accent_bar2 {
+.hero::after {
+    content: "";
+    display: block;
     background-color: var(--primary-color);
     width: 100%;
     height: 1vh;
@@ -48,15 +52,73 @@ header > h1 {
     background-color: #ffffff80;
     margin: 1em;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_card > .item {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1em;
 }
 
-.info_card h2 {
-    grid-column: span 2;
-    margin: 0 auto;
+.info_card > .card_header {
+    display: block;
+    margin: 1em auto;
 }
 
-.info_card .label {
-    align-content: right;
+.card_header > h2 {
+    margin: 0;
+}
+
+.item > .label {
+    margin: 0 0 0 auto;
+    font-weight: 500;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 0.5em;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        display: grid;
+        grid-template-columns: 5px 400px 1fr 400px 5px ;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1em;
+        row-gap: 1em;
+    }
+    .hero {
+        z-index: -1;
+        grid-column: 1 / 6;
+        grid-row: 1 / 6;
+    }
+
+    .info_card {
+        z-index: 1;
+    }
+
+    .info_card.data {
+        grid-column: 2 / 3;
+        grid-row: 1/4;
+    }
+
+    .info_card.weather {
+        grid-column: 4/5;
+        grid-row: 3/6;
+    }
+
+    .weather_icon {
+        display: none;
+    }
+    
+    .weather > .card_header > h2::after {
+        content: "🌞";
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+    }
 }

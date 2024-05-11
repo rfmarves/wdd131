@@ -3,28 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="WDD 131 - Dynamic Web Fundamentals, René Marves, place assignment"
-        name="description">
-  <meta content="René Marves"
-        name="author">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, René Marves, place assignment">
+  <meta name="author" content="René Marves">
   <title>Guatemala</title>
-  <link href="styles/place.css"
-        rel="stylesheet"
-        type="text/css">
-  <link href="https://fonts.googleapis.com"
-        rel="preconnect">
-  <link crossorigin=""
-        href="https://fonts.gstatic.com"
-        rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..400;1,300..400&display=swap"
-        rel="stylesheet">
-  <script defer
-        src="scripts/place.js"></script>
+  <link  rel="stylesheet" type="text/css" href="styles/place.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" crossorigin="" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200..800;1,200..800&display=swap">
+  <script defer src="scripts/place.js"></script>
 </head>
 <body>
   <header>
     <h1>Guatemala</h1>
-    <div class="accent_bar"></div>
   </header>
   <main>
     <picture class="hero">
@@ -32,9 +22,10 @@
       <source srcset="images/parquecito-antigua.webp" media="(min-width: 500px)">
       <img src="images/tikal-square.webp" alt="landscape from Guatemala">
     </picture>
-    <div class="accent_bar2"></div>
     <div class="info_card data">
+      <div class="card_header">
         <h2>Data</h2>
+      </div>
       <div class="item">
         <div class="label">Area:</div>
         <div class="value">108,889 sq km</div>
@@ -69,8 +60,12 @@
       </div>
     </div>
     <div class="info_card weather">
+      <div class="card_header">
         <h2>Weather</h2>
-      <div class="weather_icon"></div>
+        <div class="weather_icon">
+          <img src="images/icon-sunny.svg" alt="sunny icon" width="80px">
+        </div>
+      </div>
       <div class="item">
         <div class="label">Temperature:</div>
         <div class="value" id="temp_value"></div>
