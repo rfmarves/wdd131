@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1.0"
+        name="viewport">
+  <meta content="WDD 131 - Dynamic Web Fundamentals, René Marves, place assignment"
+        name="description">
+  <meta content="René Marves"
+        name="author">
+  <title>Guatemala</title>
+  <link href="styles/place.css"
+        rel="stylesheet"
+        type="text/css">
+  <link href="https://fonts.googleapis.com"
+        rel="preconnect">
+  <link crossorigin=""
+        href="https://fonts.gstatic.com"
+        rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..400;1,300..400&display=swap"
+        rel="stylesheet">
+  <script defer
+        src="scripts/place.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Guatemala</h1>
+    <div class="title_bar"></div>
+  </header>
+  <main>
+    <picture>
+      <!-- <source srcset="images/atitlan.webp" media="(min-width: 1000px)"> -->
+      <!-- <source srcset="images/parquecito-antigua-square.webp" media="(min-width: 500px)"> -->
+      <img src="images/tikal-square.webp" alt="Image of a place in Guatemala" width="100%">
+    </picture>
+    <div class="data">
+        <h2>Data</h2>
+      <div class="item">
+        <div class="label">Area:</div>
+        <div class="value">108,889 sq km</div>
+      </div>
+      <div class="item">
+        <div class="label">Population:</div>
+        <div class="value">18,917,714</div>
+      </div>
+      <div class="item">
+        <div class="label">Capital:</div>
+        <div class="value">Guatemala de la Asunción</div>
+      </div>
+      <div class="item">
+        <div class="label">Languages:</div>
+        <div class="value">Spanish, Q'eqchi', Kackchiquel</div>
+      </div>
+      <div class="item">
+        <div class="label">Currency:</div>
+        <div class="value">Guatemalan Quetzal</div>
+      </div>
+      <div class="item">
+        <div class="label">Time Zone:</div>
+        <div class="value">UTC-6</div>
+      </div>
+      <div class="item">
+        <div class="label">Calling Code:</div>
+        <div class="value">+502</div>
+      </div>
+      <div class="item">
+        <div class="label">Internet TLD:</div>
+        <div class="value">.gt</div>
+      </div>
+    </div>
+    <div class="weather">
+        <h2>Weather</h2>
+      <div class="weather_icon"></div>
+      <div class="item">
+        <div class="label">Temperature:</div>
+        <div class="value" id="temp_value"></div>
+      </div>
+      <div class="item">
+        <div class="label">Conditions:</div>
+        <div class="value" id="conditions_value"></div>
+      </div>
+      <div class="item">
+        <div class="label">Wind:</div>
+        <div class="value" id="wind_value"></div>
+      </div>
+      <div class="item">
+        <div class="label">Wind Chill:</div>
+        <div class="value" id="wind_chill_value"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p><span id="currentYear"></span>, René Marves, Guatemala</p>
+    <p class="lastMod">Last modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
