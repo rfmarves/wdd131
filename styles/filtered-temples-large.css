@@ -1,0 +1,26 @@
+@media screen and (min-width: 640px) {
+    header h1 {
+        text-align: center;
+    }
+    
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+}

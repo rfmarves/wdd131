@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans;
+}
+
+/* Header, footer and navigation */
+header,
+footer {
+    color: #ffffff;
+    background-color: #072e81;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.lastMod {
+    font-size: smaller;
+}
+
+.header {
+    display: flex;
+}
+
+header h1 {
+    padding: 1rem;
+    flex: 1 1 100%;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    content: "a";
+    color: white;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "×";
+}
+
+nav {
+    display: none;
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: right;
+}
+
+nav a:hover {
+    background-color: #124ecf;
+}
+
+/* Main section */
+main {
+    margin: 1rem auto;
+    max-width: 1350px;
+}
+main h2 {
+    text-align: center;
+    margin: 1rem;
+    font-size: xx-large;
+}
+
+#temple-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 450fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.temple-card {
+    background-color: #eeeeee;
+    padding: 15px;
+    border: 1px solid #d6d6d6;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.temple-card h3 {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.temple-card-data {
+    margin: 15px;
+}
+
+.temple-card img {
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.temple-card .card-label {
+    font-variant:small-caps;
+}
