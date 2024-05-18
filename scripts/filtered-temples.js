@@ -177,5 +177,5 @@ homeButton.addEventListener('click', () => {
 
 
 // initial load of all temples
-// renderTemples(temples);
+renderTemples(temples);
 
