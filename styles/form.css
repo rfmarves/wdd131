@@ -1,0 +1,91 @@
+main.formPage {
+    display: block;
+}
+
+form.productForm {
+    background-color: #64acfa36;
+    padding: 10px;
+}
+
+.formPage .formBlock {
+    display: block;
+    margin: 20px 10px;
+}
+
+.formPage select,
+.formPage textarea,
+.formPage input[type="date"],
+.formPage input[type="text"],
+.formPage .featuresSelection > label {
+    display: block;
+    width: 100%;
+}
+
+.formPage select,
+.formPage .featuresSelection > label,
+.formPage input[type="date"],
+.formPage input[type="text"] {
+    height: 1.5rem;
+}
+
+.formPage textarea {
+    height: 3rem;
+}
+
+.formBlock > p {
+    margin: 0;
+}
+
+.formPage .ratingStars {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.formPage .ratingStars > input {
+    display: none;
+}
+
+.formPage .ratingStars > label {
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: orange;   
+}
+
+.formPage .ratingStars > label:hover {
+    color: #ff69b4;
+    transition: 0.2s ease;
+}
+
+.formPage .ratingStars > label:active::before {
+    transform:scale(1.1);
+}
+
+.formPage .ratingStars > label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+}
+
+.formPage .ratingStars > input:checked ~ label:before {
+    content:'\2605';
+}
+
+.formPage button {
+    width: 100%;
+    height: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.formPage .productForm {
+    max-width: 400px;
+    margin: 0 auto;
+}

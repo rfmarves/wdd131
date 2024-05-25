@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+
+    <link rel="stylesheet" href="styles/base.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..400;1,300..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script type="module" src="scripts/form.js" deferred></script>
+    <meta name="description" content="Product review form for WDD131 course">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main class="formPage">
+        <form action="review.html" method="get" class="productForm">
+            <div class="productSelection formBlock">
+                <label for="productName">Product Name</label>
+                <select name="productName" id="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+            <div class="star-rating formBlock">
+                <label for="overallRating" id="overallRating">Overall Rating</label>
+                <div class="ratingStars">
+                    <input type="radio" name="overallRating" id="star-a" value="5" required><label for="star-a"></label>
+                    <input type="radio" name="overallRating" id="star-b" value="4" required><label for="star-b"></label>
+                    <input type="radio" name="overallRating" id="star-c" value="3" required><label for="star-c"></label>
+                    <input type="radio" name="overallRating" id="star-d" value="2" required><label for="star-d"></label>
+                    <input type="radio" name="overallRating" id="star-e" value="1" required><label for="star-e"></label>
+                </div>
+            </div>
+            <div class="installationSelection formBlock">
+                <label for="installDate">Date of Installation:</label>
+                <input type="date" name="installDate" id="installDate" required>
+            </div>
+            <div class="featuresSelection formBlock">
+                <p>Which features did you find useful in the product?</p>
+                <p>(Check all that apply)</p>
+                <label><input type="checkbox" name="durability" id="checkDurability"
+                        value="durability"> Durability</label>
+                <label><input type="checkbox" name="ease" id="checkDurability" value="ease"> Ease of
+                    Use</label>
+                <label><input type="checkbox" name="performance" id="checkPerformance"
+                        value="performance"> Performance</label>
+                <label><input type="checkbox" name="design" id="checkDesign" value="design"> Design</label>
+            </div>
+            <div class="textEntry formBlock">
+                <label for="reviewText">Written Review (Optional)</label>
+                <textarea name="reviewText" id="reviewText"></textarea>
+            </div>
+            <div class="nameInput formBlock">
+                <label for="name">Your Name (Optional)</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <button type="submit">Post Review</button>
+        </form>
+
+
+    </main>
+    <footer>
+        <p><span id="currentYear"></span>, René Marves, Guatemala</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    </footer>
+</body>
+
+</html>
