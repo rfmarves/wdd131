@@ -51,6 +51,7 @@ footer {
 header h1 { 
     padding: 1rem;
     flex: 1 1 100%;
+    font-size: 3rem;
 }
 
 #menu {
@@ -101,7 +102,7 @@ footer {
 
 /* Main section */
 main {
-    margin: 1rem auto;
+    margin: 1rem;
     max-width: 1350px;
 }
 
@@ -216,6 +217,81 @@ h2.page-header {
 .flex-card-box:nth-child(3) .flex-card-background {
     color: var(--accent2-color-text);
     background-color: var(--accent2-color);
+}
+
+/* Contact us and get a quote */
+.quote-request,
+.contact-block {
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.quote-fields,
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+}
+
+.quote-fields label,
+.contact-form label {
+    margin-top: 1rem;
+}
+
+.contact-form textarea {
+    height: 4rem;
+}
+
+.quote-fields button,
+.contact-form button {
+    border: none;
+    margin: 0;
+    background-color: var(--accent1-color);
+    color: var(--accent1-color-text);
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+}
+
+.quote-fields button:hover,
+.contact-form button:hover {
+    background-color: var(--accent2-color);
+    color: var(--accent2-color-text);
+}
+
+.button-container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.radio-button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 0;
+}
+
+.pre-form-text p{
+    margin: 0.7rem 0;
+}
+
+.quote-result {
+    display: none;
+}
+
+.quote-result .visible {
+    text-align: center;
+    z-index: 50;
+    border: double 5px var(--secondary-color);
+    background-color: white;
+    width: 15rem;
+    padding: 1em;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 640px) {

@@ -24,7 +24,7 @@
                 </a>
             </div>
             <h1>imprime.ninja</h1>
-            <a href="#" id="menu"></a>
+            <a href="#" id="menu" aria-label="Menu icon"></a>
         </div>
         <nav class="navigation">
             <a class="nav-link" href="index.html">Home</a>
@@ -35,7 +35,29 @@
         </nav> 
     </header>
     <main>
-        main goes header
+        <h2 class="page-header">Instant quote</h2>
+        <div class="quote-request">
+            <div class="pre-form-text">
+                <p>Fill out the form below to get an instant rough quote for your 3d print.</p>
+                <p>Use PrusaSlicer with default settings to get the key values requested below.</p>    
+            </div>
+            <form method="get" id="quote-form">
+                <fieldset class="quote-fields">
+                    <label>Print material:</label>
+                    <div class="radio-button-row">
+                        <label><input type="radio" name="print-material" id="print-material" required value="PLA" > PLA</label>
+                        <label><input type="radio" name="print-material" id="print-material" required value="PETG"> PETG</label>
+                        <label><input type="radio" name="print-material" id="print-material" required value="Flex"> Flex</label>    
+                    </div>
+                    <label>Material weight (grams): <input type="number" name="print-weight" id="print-time" min="1" required></label>
+                    <label>Print time (hours): <input type="number" name="print-time" id="print-time" min="1" required></label>
+                    <div class="button-container"><button id="get-quote" type="submit">Get quote</button></div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="quote-result">
+            This print would cost<div id="quote-output"></div>
+        </div>
     </main>
     <footer>
         ©<span id="currentYear"></span> imprime.ninja
