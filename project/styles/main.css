@@ -157,34 +157,63 @@ h2.page-header {
 /* who we are */
 .flex-card-box {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    flex-direction: column;
     align-items: center;
     padding: 0 2rem;
 }
 
 .flex-card-image {
-    box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
     margin: 3rem;
+    grid-column: 3/4;
+    grid-row: 1/4;
+    z-index: 2;
+    text-align: center;
+}
+
+.flex-card-image img {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
+}
+
+.flex-card-background {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
 }
 
 .flex-card-text {
     padding: 2.5rem;
     font-size: 1.3rem;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
     box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
 }
 
-.flex-card-box:nth-child(1) .flex-card-text{
+.flex-card-box:nth-child(1) .flex-card-text,
+.flex-card-box:nth-child(1) .flex-card-background{
     color: var(--secondary-color-text);
     background-color: var(--secondary-color);
 }
 
-.flex-card-box:nth-child(2) .flex-card-text {
+.flex-card-box:nth-child(2) .flex-card-text,
+.flex-card-box:nth-child(2) .flex-card-background {
     color: var(--accent1-color-text);
     background-color: var(--accent1-color);
 }
 
-.flex-card-box:nth-child(3) .flex-card-text {
+.flex-card-box:nth-child(2) .flex-card-image {
+    grid-column: 1/2;
+}
+
+.flex-card-box:nth-child(2) .flex-card-text {
+    grid-column: 2/4;
+}
+
+.flex-card-box:nth-child(3) .flex-card-text,
+.flex-card-box:nth-child(3) .flex-card-background {
     color: var(--accent2-color-text);
     background-color: var(--accent2-color);
 }
@@ -211,46 +240,12 @@ h2.page-header {
 
 @media screen and (min-width: 900px) {
     .flex-card-box {
-        flex-direction: row;
-    }
-    .flex-card-box:nth-child(odd) {
-    flex-direction: row-reverse;
+        display: grid;
+        align-items: normal;
     }
 
     .flex-card-text {
         box-shadow: none;
-    }
-
-    .flex-card-background {
-        z-index: -1;
-        position: absolute;
-        height: 12rem;
-        width: 90%;
-        box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
-    }
-    
-    .flex-card-box:nth-child(1) .flex-card-background {
-        background-color: var(--secondary-color);
-    }
-    .flex-card-box:nth-child(1) .flex-card-text{
-        color: var(--secondary-color-text);
-        background-color: transparent;
-    }
-    
-    .flex-card-box:nth-child(2) .flex-card-background {
-        background-color: var(--accent1-color);
-    }
-    .flex-card-box:nth-child(2) .flex-card-text {
-        color: var(--accent1-color-text);
-        background-color: transparent;
-    }
-    
-    .flex-card-box:nth-child(3) .flex-card-background {
-        background-color: var(--accent2-color);
-    }
-    .flex-card-box:nth-child(3) .flex-card-text {
-        color: var(--accent2-color-text);
-        background-color: transparent;
     }
     
 }
