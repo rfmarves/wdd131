@@ -1,0 +1,267 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #104560;  /*use  with white text*/
+    --secondary-color: #F19F0D; /*use  with black text*/
+    --accent1-color: #572C7D; /*use  with white text*/
+    --accent2-color: #1AD214; /*use  with black text*/
+    --page-background: #fafafa;
+    --card-background: white;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Zilla Slab";
+    --paragraph-font: "Raleway", sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --primary-color-text: white;
+    --secondary-color-text: black;
+    --accent1-color-text: white;
+    --accent2-color-text: black;
+    --nav-link-color: var(--primary-color-text);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--secondary-color-text);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--page-background);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+header,
+footer {
+    color: var(--primary-color-text);
+    background-color: var(--primary-color);
+}
+
+.header {
+    display: flex;
+    padding: 0.5rem;
+}
+
+header h1 { 
+    padding: 1rem;
+    flex: 1 1 100%;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    content: "a";
+    color: white;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#logo-link > img {
+    border-radius: 15px;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    display: none;
+}
+
+nav.show {
+    display: block;
+}
+
+nav a {
+    display: block;
+    color: var(--nav-link-color);
+    padding: 0.8rem;
+    text-decoration: none;
+    text-align: right;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* Main section */
+main {
+    margin: 1rem auto;
+    max-width: 1350px;
+}
+
+main.homepage {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h2.page-header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Home page card grid */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 450fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.product-card {
+    background-color: var(--card-background);
+    padding: 15px;
+    border: 3px solid var(--secondary-color);
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.product-card h3 {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.product-card img {
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+    display: none;
+}
+
+.sidebar-card {
+    margin-bottom: 2em;
+    padding: 0.5em;
+    border-style: solid;
+    border-color: var(--accent2-color);
+    text-align: center;
+    background-color: var(--card-background);
+}
+
+/* who we are */
+.flex-card-box {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.flex-card-image {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
+    margin: 3rem;
+}
+
+.flex-card-text {
+    padding: 2.5rem;
+    font-size: 1.3rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
+}
+
+.flex-card-box:nth-child(1) .flex-card-text{
+    color: var(--secondary-color-text);
+    background-color: var(--secondary-color);
+}
+
+.flex-card-box:nth-child(2) .flex-card-text {
+    color: var(--accent1-color-text);
+    background-color: var(--accent1-color);
+}
+
+.flex-card-box:nth-child(3) .flex-card-text {
+    color: var(--accent2-color-text);
+    background-color: var(--accent2-color);
+}
+
+@media screen and (min-width: 640px) {
+    header h1 {
+        text-align: center;
+    }
+    
+    nav {
+        display: flex;
+    }
+
+    nav a {
+        display: flex;
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .flex-card-box {
+        flex-direction: row;
+    }
+    .flex-card-box:nth-child(odd) {
+    flex-direction: row-reverse;
+    }
+
+    .flex-card-text {
+        box-shadow: none;
+    }
+
+    .flex-card-background {
+        z-index: -1;
+        position: absolute;
+        height: 12rem;
+        width: 90%;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgb(172, 172, 172);
+    }
+    
+    .flex-card-box:nth-child(1) .flex-card-background {
+        background-color: var(--secondary-color);
+    }
+    .flex-card-box:nth-child(1) .flex-card-text{
+        color: var(--secondary-color-text);
+        background-color: transparent;
+    }
+    
+    .flex-card-box:nth-child(2) .flex-card-background {
+        background-color: var(--accent1-color);
+    }
+    .flex-card-box:nth-child(2) .flex-card-text {
+        color: var(--accent1-color-text);
+        background-color: transparent;
+    }
+    
+    .flex-card-box:nth-child(3) .flex-card-background {
+        background-color: var(--accent2-color);
+    }
+    .flex-card-box:nth-child(3) .flex-card-text {
+        color: var(--accent2-color-text);
+        background-color: transparent;
+    }
+    
+}
+
+
+@media screen and (min-width: 1150px) {
+    main.homepage {
+        grid-template-columns: 4fr 1fr;
+    }
+    .sidebar {
+        display: block;
+    }
+
+}

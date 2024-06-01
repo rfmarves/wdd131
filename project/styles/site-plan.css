@@ -14,10 +14,10 @@
   --secondary-color-text: black;
   --accent1-color-text: white;
   --accent2-color-text: black;
-  --nav-link-color: white;
+  --nav-link-color: var(--primary-color-text);
   --nav-background-color: var(--primary-color);
-  --nav-hover-link-color: var(--primary-color);
-  --nav-hover-background-color: #FAFDFF;
+  --nav-hover-link-color: var(--secondary-color);
+  --nav-hover-background-color: var(--secondary-color-text);
 } 
 
 
