@@ -61,6 +61,6 @@ costParameters.forEach(material => {
     materialSelection.appendChild(newRadioItem);
 }); 
 
-getQuoteButton.addEventListener('click', displayQuote);
+getQuoteButton.addEventListener('click', () => {displayQuote()});
 
-quoteResult.addEventListener('click', hideQuote);
+quoteResult.addEventListener('click', () => {hideQuote()});
