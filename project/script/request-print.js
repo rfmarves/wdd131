@@ -4,7 +4,6 @@ const advertisedSelect = document.querySelector('#advertised-print');
 const labelURL = document.querySelector('#object-url-label');
 const objectURL = document.querySelector('#object-url');
 const requestButton = document.querySelector('#requestPrint');
-const 
 
 
 radioClicked = () => {
