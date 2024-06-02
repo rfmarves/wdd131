@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script defer src="script/main.js"></script>
+    <script defer src="script/quote.js"></script>
 </head>
 <body>
     <header>
@@ -44,18 +45,18 @@
             <form method="get" id="quote-form">
                 <fieldset class="quote-fields">
                     <label>Print material:</label>
-                    <div class="radio-button-row">
-                        <label><input type="radio" name="print-material" id="print-material" required value="PLA" > PLA</label>
+                    <div id="material-selection" class="radio-button-row">
+                        <!-- <label><input type="radio" name="print-material" id="print-material" required value="PLA" > PLA</label>
                         <label><input type="radio" name="print-material" id="print-material" required value="PETG"> PETG</label>
-                        <label><input type="radio" name="print-material" id="print-material" required value="Flex"> Flex</label>    
+                        <label><input type="radio" name="print-material" id="print-material" required value="Flex"> Flex</label>     -->
                     </div>
-                    <label>Material weight (grams): <input type="number" name="print-weight" id="print-time" min="1" required></label>
+                    <label>Material weight (grams): <input type="number" name="print-weight" id="print-weight" min="1" required></label>
                     <label>Print time (hours): <input type="number" name="print-time" id="print-time" min="1" required></label>
-                    <div class="button-container"><button id="get-quote" type="submit">Get quote</button></div>
+                    <div class="button-container"><button id="get-quote" type="button">Get quote</button></div>
                 </fieldset>
             </form>
         </div>
-        <div class="quote-result">
+        <div id="quote-result" class="quote-result hidden">
             This print would cost<div id="quote-output"></div>
         </div>
     </main>
